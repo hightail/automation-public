@@ -1,0 +1,26 @@
+logging:
+  level: INFO
+  loggers:
+    automation: DEBUG
+
+  appenders:
+    - type: console
+    - type: file
+      threshold: DEBUG
+      logFormat: "%-6level [%d{HH:mm:ss.SSS}] [%t] %logger{5} - %X{code} %msg %n"
+      currentLogFilename: application.log
+      archivedLogFilenamePattern: application-%d{yyyy-MM-dd}-%i.log.gz
+      archivedFileCount: 7
+      timeZone: UTC
+      maxFileSize: 10MB
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+suitePath: "src/main/resources/testng_"
+baseURL: "http://www.hightail.com"
