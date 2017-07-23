@@ -1,16 +1,16 @@
-# DropwizardTest
+# Dropwizard, Selenium and TestNg Integration
 
 Introduction
 ------------
-This sample project is to ensure dropwizard and testng can play well together. The intention is to use testng to 
+This sample project is to ensure dropwizard, selenium and testng can play well together. The intention is to use testng to 
 test other applications end to end. 
 
 Prerequisites
 -------------
 Ensure that the latest version of Chrome driver is installed on your machine
 
-How to start the DropwizardTest application
----
+How to start the application
+----------------------------
 
 1. Run `mvn clean install` to build your application
 1. Start application with `java -jar target/automation-experiment-1.0-SNAPSHOT.jar server automationexperiment.yml`
